@@ -22,13 +22,20 @@ print (f"La division de los numeros es {division}.")
 celsius = float(input("Ingrese los grados Celsius: "))
 fahrenheit = float(input("Ingrese los grados Fahrenheit: "))
 
-eleccion = print(input("¿Que conversion quiere hacer?: Celsius, Fahrenheit"))
-
 convCelsius = (celsius * 1.8) + 32
-print(f"{celsius} grados Celsius son {convCelsius} grados Fahrenheit.")
 
 convFahrenheit = (fahrenheit - 32) * 0.555
-print(f"{fahrenheit} grados Fahrenheit son {convFahrenheit} grados Celsius.")
+
+eleccion = print(input("""¿Que conversion quiere hacer:
+                       1 Celsius
+                       2 Fahrenheit
+                       : """))
+
+if eleccion == 1:
+    print(f"{celsius} grados Celsius son {convCelsius} grados Fahrenheit.")
+else:
+    print(f"{fahrenheit} grados Fahrenheit son {convFahrenheit} grados Celsius.")
+
 
 # 3. Verificación de Edad: Desarrollar un diagrama de flujo que determine si una persona
 #es mayor de edad (18 años o más) basándose en la edad ingresada por el usuario.
@@ -36,7 +43,11 @@ edad = int(input("Ingrese su edad: "))
 if edad >= 18:
     print("Usted es mayor de edad.")
 else:
-    print("Eres menor de edad.")
+    print("Eres menor de edad.") 
 
 # 4. Cálculo de Promedio: Diseñar un diagrama de flujo que calcule el promedio de 
 #tres números (a,b,c) proporcionados por el usuario. Promedio = (a + b + c) / 3.
+numeros = float(input("""Ingrese un numero:
+Ingrese otro numero: 
+Ingrese un ultimo numero: 
+"""))
